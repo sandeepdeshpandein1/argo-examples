@@ -7,7 +7,7 @@ patches:
       version: v1
       kind: Deployment
       name: mywebapp
-    path: some-patch.yaml   # ✅ Valid for JSON6902-style patches
+    path: replicas.yaml   # ✅ Valid for JSON6902-style patches
 
 configMapGenerator:
 - name: mykustom-map
