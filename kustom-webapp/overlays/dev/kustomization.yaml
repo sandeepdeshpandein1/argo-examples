@@ -1,9 +1,12 @@
 resources:
-- ../../base
+  - ../../base
 
 patchesStrategicMerge:
- - replicas.yaml
+  - replicas.yaml
 
 configMapGenerator:
-- name: mykustom-map
-  env: config.properties
+  - name: mykustom-map
+    env: config.properties
+
+generatorOptions:
+  disableNameSuffixHash: true  # Optional, prevents hashed suffix in ConfigMap name
