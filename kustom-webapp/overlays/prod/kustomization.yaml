@@ -2,7 +2,12 @@ bases:
 - ../../base
 
 patches:
- - replicas.yaml
+  - target:
+      group: apps
+      version: v1
+      kind: Deployment
+      name: mywebapp
+    path: some-patch.yaml   # ✅ Valid for JSON6902-style patches
 
 configMapGenerator:
 - name: mykustom-map
